@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Shop.Infra.Model;
 
-namespace Shop.Common.Model
+namespace Shop.Common.Models
 {
 	public class Category : BaseEntity
 	{
@@ -10,7 +10,7 @@ namespace Shop.Common.Model
 		public DateTime DateCreated { get; set; }
 		public DateTime DateUpdate { get; set; }
 
-		public virtual List<Gadget> Gadgets { get; set; }
+		public virtual ICollection<Product> Products { get; set; }
 
 		public Category()
 		{

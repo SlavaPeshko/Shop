@@ -1,6 +1,6 @@
-﻿using Shop.Common.Model;
+﻿using Shop.Common.Models;
 using Shop.DAL.Context;
-using Shop.DAL.Infra;
+using Shop.DAL.Repository.Infra;
 
 namespace Shop.DAL.Repository
 {

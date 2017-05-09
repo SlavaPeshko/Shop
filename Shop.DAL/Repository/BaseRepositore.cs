@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 using Shop.DAL.Context;
 using Shop.Infra.Model;
 
@@ -76,6 +75,7 @@ namespace Shop.DAL.Repository
 		public virtual void Delete(T entity)
 		{
 			_dbSet.Remove(entity);
+			_dbContext.SaveChanges();
 		}
 
 		/// <summary>
@@ -87,6 +87,7 @@ namespace Shop.DAL.Repository
 			IEnumerable<T> objects = _dbSet.Where<T>(predicate).AsEnumerable();
 			foreach (var obj in objects)
 				_dbSet.Remove(obj);
+			_dbContext.SaveChanges();
 		}
 
 		/// <summary>
@@ -94,7 +95,7 @@ namespace Shop.DAL.Repository
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
-		public virtual T GetById(int id)
+		public virtual T GetById(Guid? id)
 		{
 			return _dbSet.Find(id);
 		}

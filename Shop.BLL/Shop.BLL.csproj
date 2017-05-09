@@ -41,6 +41,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\Infra\ICategoryService.cs" />
+    <Compile Include="Services\Infra\IProductService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{3e8e232d-46bc-4225-a35d-4675e0c0ea45}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.DAL\Shop.DAL.csproj">
+      <Project>{4429157c-2946-4e50-9200-92430daedf6e}</Project>
+      <Name>Shop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Infra\Shop.Infra.csproj">
+      <Project>{53f96a11-0041-4983-b0cc-002c909b82c5}</Project>
+      <Name>Shop.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

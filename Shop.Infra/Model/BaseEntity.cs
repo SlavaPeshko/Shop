@@ -1,4 +1,6 @@
-﻿namespace Shop.Infra.Model
+﻿using System;
+
+namespace Shop.Infra.Model
 {
 	/// <summary>
 	/// Base class entities

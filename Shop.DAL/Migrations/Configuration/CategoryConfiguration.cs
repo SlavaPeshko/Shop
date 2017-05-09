@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Shop.Common.Model;
+using Shop.Common.Models;
 
 namespace Shop.DAL.Migrations.Configuration
 {

@@ -1,8 +1,8 @@
 ﻿using Shop.Infra.Model;
 
-namespace Shop.Common.Model
+namespace Shop.Common.Models
 {
-	public class Gadget : BaseEntity
+	public class Product : BaseEntity
 	{
 		public string Name { get; set; }
 		public string Description { get; set; }
@@ -10,6 +10,6 @@ namespace Shop.Common.Model
 		public byte[] Image { get; set; }
 
 		public int CategoryId { get; set; }
-		public Category Category { get; set; }
+		public virtual Category Category { get; set; }
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Shop.Common.Model;
+using Shop.Common.Models;
 
 namespace Shop.DAL.Migrations.Configuration
 {
-	public class GadgetConfiguration : EntityTypeConfiguration<Gadget>
+	public class ProductConfiguration : EntityTypeConfiguration<Product>
 	{
-		public GadgetConfiguration()
+		public ProductConfiguration()
 		{
 			ToTable("Gadgets");
 			Property(n => n.Name).IsRequired().HasMaxLength(50);
