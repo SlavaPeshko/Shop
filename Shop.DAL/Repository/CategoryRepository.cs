@@ -9,5 +9,10 @@ namespace Shop.DAL.Repository
 		public CategoryRepository(ShopContext shopContext) : base(shopContext)
 		{
 		}
+
+		public Category GetCategoryByName(string categoryName)
+		{
+			var category = this.DbContext.
+		}
 	}
 }
