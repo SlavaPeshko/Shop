@@ -39,14 +39,24 @@ namespace Shop.DAL.Repository
 		/// <summary>
 		/// Gets the _shopContext.
 		/// </summary>
-		protected DbContext DbContext => _dbContext;
+		protected ShopContext DbContext
+		{
+			get
+			{
+				return _dbContext;
+			}
+		}
 
 		/// <summary>
 		/// Gets the current db set.
 		/// </summary>
-		protected IDbSet<T> DbSet => _dbSet;
-
-		
+		protected IDbSet<T> DbSet
+		{
+			get
+			{
+				return _dbSet;
+			}
+		}
 
 		/// <summary>
 		/// 
@@ -95,7 +105,7 @@ namespace Shop.DAL.Repository
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
-		public virtual T GetById(Guid? id)
+		public virtual T GetById(int id)
 		{
 			return _dbSet.Find(id);
 		}

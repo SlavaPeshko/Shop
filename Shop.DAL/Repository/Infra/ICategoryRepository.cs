@@ -5,6 +5,6 @@ namespace Shop.DAL.Repository.Infra
 {
 	public interface ICategoryRepository : IRepository<Category>
 	{
-		
+		Category GetCategoryByName(string name);
 	}
 }

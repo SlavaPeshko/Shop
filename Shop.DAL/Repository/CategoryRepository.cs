@@ -1,4 +1,6 @@
-﻿using Shop.Common.Models;
+﻿using System;
+using System.Linq;
+using Shop.Common.Models;
 using Shop.DAL.Context;
 using Shop.DAL.Repository.Infra;
 
@@ -10,9 +12,12 @@ namespace Shop.DAL.Repository
 		{
 		}
 
-		public Category GetCategoryByName(string categoryName)
+		public Category GetCategoryByName(string name)
 		{
-			var category = this.DbContext.
+			var category =
+				this.DbContext.Categories.FirstOrDefault(n => n.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+		
+			return category;
 		}
 	}
 }
