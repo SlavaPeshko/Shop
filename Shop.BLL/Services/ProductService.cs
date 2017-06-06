@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Shop.BLL.Services.Infra;
 using Shop.Common.Models;
 using Shop.DAL.Repository.Infra;
@@ -26,8 +27,8 @@ namespace Shop.BLL.Services
 
 		public IEnumerable<Product> GetCategoryProducts(string categoryName, string productName)
 		{
-			//var product = _categoryRepository.G
-			throw new NotImplementedException();
+			var product = _categoryRepository.GetCategoryByName(categoryName);
+			return product.Products.Where(n => n.Name.ToUpper().Contains(productName.ToUpper()));
 		}
 
 		public Product GetProduct(int id)

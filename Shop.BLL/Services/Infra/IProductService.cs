@@ -9,6 +9,6 @@ namespace Shop.BLL.Services.Infra
 		IEnumerable<Product> GetCategoryProducts(string categoryName, string productName);
 		Product GetProduct(int id);
 		void CreateProduct(Product product);
-		void SaveProduct();
+		//void SaveProduct();
 	}
 }

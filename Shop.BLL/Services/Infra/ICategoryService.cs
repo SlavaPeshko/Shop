@@ -6,9 +6,10 @@ namespace Shop.BLL.Services.Infra
 {
 	public interface ICategoryService
 	{
-		IEnumerable<CategoryViewModel> GetCategories(string name);
-		CategoryViewModel GetCategory(int id);
-		CategoryViewModel GetCategory(string name);
+		IEnumerable<Category> GetCategories(string name);
+		Category GetCategory(int id);
+		Category GetCategory(string name);
 		void CreateCategory(Category category);
+		// void SaveCategory();
 	}
 }
